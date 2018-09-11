@@ -1,0 +1,14 @@
+h3 Create Entry
+p Enter a name to quickly create a new entry on the system
+form(action="/edit/" + entry.id,method="post")
+  label(for="name") Name:
+  br
+  input(type="text",name="name",value=entry.name)
+  br
+  br
+  label(for="tel") Tel:
+  br
+  input(type="text",name="tel",value=entry.tel)
+  br
+  br
+  button Update Entry

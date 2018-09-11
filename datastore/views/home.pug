@@ -1,0 +1,12 @@
+h3 Contacts
+p Click "create" to add another contact to the database
+-if((locals.entries || []).length > 0)
+  ul
+    each entry in locals.entries || []
+      li
+        a(href="/edit/" + entry.id) #{entry.name} (#{entry.tel})
+        span &nbsp;
+        a(href="/delete/" + entry.id,style="color:red;",onclick="return confirm('really delete');") delete
+  p <a href="/add">Create</a> another contact
+-else
+  p no entries created yet, <a href="/add">create</a> one now
